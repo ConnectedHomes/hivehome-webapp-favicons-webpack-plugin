@@ -2,11 +2,12 @@
 Favicon Generator for Hivehome Webapp
 
 ## Usage
-```
+```javascript
+
 const HivehomeWebappFaviconsWebpackPlugin = require('hivehome-webapp-favicons-webpack-plugin');
-...
-{
-  //... webpack config
+
+const config = {
+  /* ...webpack config here... */
   plugins: [
     new HivehomeWebappFaviconsWebpackPlugin({
       title: 'Hive Home',
@@ -31,5 +32,5 @@ const HivehomeWebappFaviconsWebpackPlugin = require('hivehome-webapp-favicons-we
       }
     })
   ]
-}
+};
 ```
