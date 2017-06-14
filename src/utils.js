@@ -7,7 +7,9 @@ export async function resizeImage(source, target, width, height) {
     const sourceImg = await Jimp.read(source);
     return new Promise((resolve, reject) => {
         try {
-            sourceImg.resize(width, height).write(target, () => resolve(target));
+            sourceImg
+                .contain(width, height, Jimp.HORIZONTAL_ALIGN_CENTER | Jimp.VERTICAL_ALIGN_MIDDLE)
+                .write(target, () => resolve(target));
         } catch (error) {
             reject(error);
         }
@@ -21,8 +23,12 @@ export async function convertToIco(sources, target) {
 }
 
 export async function injectHashIntoFilename(filename, file) {
-    const hash = await md5File(file);
-    return filename.replace('[hash]', hash);
+    if (filename.indexOf('[hash]') > -1) {
+        const hash = await md5File(file);
+        return filename.replace('[hash]', hash);
+    } else {
+        return filename;
+    }
 }
 
 export function addFileToAssets(filename, path, compilation) {
@@ -39,4 +45,27 @@ export function addFileToAssets(filename, path, compilation) {
     } catch (error) {
         return Promise.reject(new Error('HiveHomeFaviconsWebpackPlugin: could not load file ' + filename));
     }
+}
+
+export function generateLinkElement(attrs) {
+    const attrStr = Object.entries(attrs).map(([key, value]) => `${key}="${value}"`).join(' ');
+    return `<link ${attrStr}>`;
+}
+
+export function generateSizeMap(sizes, baseName, path, publicPath, outputPrefix) {
+    return sizes.map(({ width, height }) => ({
+        width,
+        height,
+        publicPath: `${publicPath}${outputPrefix}${baseName}-${width}x${height}.png`,
+        path: `${path}/${outputPrefix}${baseName}-${width}x${height}.png`
+    }));
+}
+
+export function generateMetaElement(name, content) {
+    return `<meta name="${name}" content="${content}">`;
+}
+
+export function writeFile(filename, contents) {
+    fs.writeFileSync(filename, contents);
+    return;
 }

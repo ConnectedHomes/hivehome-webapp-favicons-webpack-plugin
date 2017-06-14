@@ -33,8 +33,7 @@ HiveHomeFaviconsWebpackPlugin.prototype.apply = function(compiler) {
             );
 
             files = results.reduce((a, r) => [...a, ...r.files], []);
-            faviconHTML = results.reduce((a, r) => a + r.html, '');
-
+            faviconHTML = results.reduce((a, r) => `${a}${r.html}\n`, '');
             callback();
         } catch (error) {
             callback(error);
@@ -45,11 +44,9 @@ HiveHomeFaviconsWebpackPlugin.prototype.apply = function(compiler) {
         compilation.plugin('html-webpack-plugin-before-html-processing', async function(htmlPluginData, callback) {
             try {
                 await Promise.all(files.map(f => addFileToAssets(f, compilation.outputOptions.path, compilation)));
-                console.log(compilation.assets);
                 htmlPluginData.html = htmlPluginData.html.replace(/(<\/head>)/i, faviconHTML + '$&');
                 callback(null, htmlPluginData);
             } catch (error) {
-                console.log('compile-error', error);
                 callback(error);
             }
         });

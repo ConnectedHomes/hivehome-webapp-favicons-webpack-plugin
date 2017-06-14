@@ -60,6 +60,6 @@
     "babel-polyfill": "^6.16.0",
     "jimp": "^0.2.28",
     "to-ico": "^1.1.4",
-    "webpack": "1.13.2"
+    "webpack": "1.14.0"
   }
 }
