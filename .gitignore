@@ -1,0 +1,20 @@
+node_modules
+bower_components
+coverage
+/actions
+/honeycomb-api
+/honeycomb-interpreter
+/utils
+.DS_Store
+npm-debug.log
+.eslintcache
+
+#SERVERLESS
+admin.env
+.env
+
+#Ignore _meta folder
+_meta/_tmp
+
+#Annoying left over folders from webpack
+src/*/*/src

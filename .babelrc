@@ -1,0 +1,10 @@
+{
+   "presets":[ "es2015", "stage-0" ],
+   "plugins":[
+      [ "transform-async-functions" ],
+      [ "transform-runtime", { "polyfill":true, "regenerator":true } ],
+      [ "transform-regenerator" ],
+      [ "transform-async-to-generator" ],
+      [ "babel-root-import", { "rootPathSuffix": "src" } ]
+   ]
+}
