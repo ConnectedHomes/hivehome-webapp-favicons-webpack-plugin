@@ -15,7 +15,7 @@ export default async function({ title, prefix, source, tileColor }, { path, publ
     const browserConfigPublic = `${publicPath}${outputFilename}`;
 
     const sizes = generateSizeMap(IMAGE_SIZES, 'mstile', path, publicPath, outputPrefix);
-    await Promise.all(sizes.map(({ path, width, height }) => resizeImage(source, path, width, height)));
+    await Promise.all(sizes.map(({ path, width, height }) => resizeImage(source, path, width, height, tileColor)));
 
     const browserConfig = generateBrowserConfig(title, sizes, tileColor);
     writeFile(browserConfigPath, browserConfig);

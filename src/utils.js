@@ -2,11 +2,15 @@ import fs from 'fs';
 import toIco from 'to-ico';
 import Jimp from 'jimp';
 import md5File from 'md5-file/promise';
+import TinyColor from 'tinycolor2';
 
-export async function resizeImage(source, target, width, height) {
+export async function resizeImage(source, target, width, height, backgroundColor) {
     const sourceImg = await Jimp.read(source);
     return new Promise((resolve, reject) => {
         try {
+            if (backgroundColor) {
+                sourceImg.background(hexColorToInt(backgroundColor));
+            }
             sourceImg
                 .contain(width, height, Jimp.HORIZONTAL_ALIGN_CENTER | Jimp.VERTICAL_ALIGN_MIDDLE)
                 .write(target, () => resolve(target));
@@ -14,6 +18,15 @@ export async function resizeImage(source, target, width, height) {
             reject(error);
         }
     });
+}
+
+export function hexColorToInt(val = 0) {
+    if (typeof val === 'number') {
+        return Number(val);
+    }
+
+    const color = new TinyColor(val);
+    return parseInt(color.toHex8(), 16);
 }
 
 export async function convertToIco(sources, target) {
