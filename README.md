@@ -1,5 +1,14 @@
+
 # hivehome-webapp-favicons-webpack-plugin
-Favicon Generator Webpack
+
+Connect Home Favicon Generator Plugin for Webpack
+Generates favicons, app-touch icons and descriptor/manifest files for IOS, Android, Windows and Generic favicons.
+
+
+[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+[![NPM version](https://badge.fury.io/js/badge-list.svg)](http://badge.fury.io/js/badge-list)
+[![Dependency Status](https://david-dm.org/boennemann/badges.svg)](https://david-dm.org/boennemann/badges)
+[![devDependency Status](https://david-dm.org/boennemann/badges/dev-status.svg)](https://david-dm.org/boennemann/badges#info=devDependencies)
 
 ## Supported Platforms:
 
