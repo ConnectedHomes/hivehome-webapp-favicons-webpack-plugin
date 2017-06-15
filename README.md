@@ -13,7 +13,9 @@ Generates favicons, app-touch icons and descriptor/manifest files for IOS, Andro
 ## Configuration options
 
 `title` - The app name (will appear in `browserconfig.xml` and `manifest.json` files)
+
 `prefix` - A filename prefix to append to all output filenames. Note the string `[hash]` in the prefix will be replaced by a sha256 hash of the source file.
+
 `platforms` - A map of configurations, supports: `generic`, `iphone`, `android` and `windows`. Each must contain *at least* a reference to a `source` file, but there are other platform-specific options too. See the example below.
 
 ## Supported Platforms:
