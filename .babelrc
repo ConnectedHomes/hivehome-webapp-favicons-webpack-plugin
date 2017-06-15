@@ -1,10 +1,16 @@
 {
-   "presets":[ "es2015", "stage-0" ],
+   "presets":[
+        ["env", {
+            "useBuiltIns": true,
+            "targets": {
+                "node": "6"
+            },
+            "modules": "commonjs",
+            "debug": false
+        }],
+        "stage-0"
+    ],
    "plugins":[
-      [ "transform-async-functions" ],
-      [ "transform-runtime", { "polyfill":true, "regenerator":true } ],
-      [ "transform-regenerator" ],
-      [ "transform-async-to-generator" ],
       [ "babel-root-import", { "rootPathSuffix": "src" } ]
    ]
 }
