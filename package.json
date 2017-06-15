@@ -1,5 +1,5 @@
 {
-  "name": "hivehome-webapp-favicons-webpack-plugin",
+  "name": "@connected-home/hivehome-webapp-favicons-webpack-plugin",
   "version": "1.1.2",
   "description": "Favicon Generator for Hivehome Webapp",
   "main": "lib/index.js",
@@ -35,7 +35,7 @@
     "icon"
   ],
   "author": "Peter Bevan <peter.bevan@hivehome.com>",
-  "private": true,
+  "private": false,
   "bugs": {
     "url": "https://github.com/ConnectedHomes/hivehome-webapp-favicons-webpack-plugin/issues"
   },
