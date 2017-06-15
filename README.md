@@ -34,3 +34,7 @@ const config = {
   ]
 };
 ```
+
+##License
+
+This project is licensed under MIT.

@@ -1,7 +1,7 @@
 import fs from 'fs';
 import toIco from 'to-ico';
 import Jimp from 'jimp';
-import md5File from 'md5-file/promise';
+import hasha from 'hasha';
 import TinyColor from 'tinycolor2';
 
 export async function resizeImage(source, target, width, height, backgroundColor) {
@@ -37,7 +37,7 @@ export async function convertToIco(sources, target) {
 
 export async function injectHashIntoFilename(filename, file) {
     if (filename.indexOf('[hash]') > -1) {
-        const hash = await md5File(file);
+        const hash = await hasha.fromFile(file, { algorithm: 'sha256' });
         return filename.replace('[hash]', hash);
     } else {
         return filename;
