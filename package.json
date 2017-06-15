@@ -1,6 +1,6 @@
 {
   "name": "hivehome-webapp-favicons-webpack-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Favicon Generator for Hivehome Webapp",
   "main": "lib/index.js",
   "engines": {
@@ -39,6 +39,7 @@
   "bugs": {
     "url": "https://github.com/ConnectedHomes/hivehome-webapp-favicons-webpack-plugin/issues"
   },
+  "licence": "MIT",
   "homepage": "https://github.com/ConnectedHomes/hivehome-webapp-favicons-webpack-plugin#readme",
   "devDependencies": {
     "babel-cli": "^6.16.0",
