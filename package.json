@@ -1,6 +1,6 @@
 {
   "name": "hivehome-webapp-favicons-webpack-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Favicon Generator for Hivehome Webapp",
   "main": "lib/index.js",
   "engines": {
@@ -27,8 +27,14 @@
     "type": "git",
     "url": "git://github.com/ConnectedHomes/hivehome-webapp-favicons-webpack-plugin.git"
   },
-  "keywords": [],
-  "author": "Peter Bevan <peter.bevan@bgch.co.uk>",
+  "keywords": [
+    "webpack",
+    "plugin",
+    "html-webpack-plugin",
+    "favicon",
+    "icon"
+  ],
+  "author": "Peter Bevan <peter.bevan@hivehome.com>",
   "private": true,
   "bugs": {
     "url": "https://github.com/ConnectedHomes/hivehome-webapp-favicons-webpack-plugin/issues"
@@ -56,11 +62,13 @@
     "prettier": "^1.0.0",
     "prettier-config": "^1.0.0"
   },
+  "peerDependencies": {
+    "webpack": "1.14.0"
+  },
   "dependencies": {
     "babel-polyfill": "^6.16.0",
     "jimp": "^0.2.28",
     "tinycolor2": "^1.4.1",
-    "to-ico": "^1.1.4",
-    "webpack": "1.14.0"
+    "to-ico": "^1.1.4"
   }
 }
