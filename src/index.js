@@ -1,4 +1,5 @@
 import assert from 'assert';
+import "babel-polyfill";
 import platforms from './platforms';
 import { addFileToAssets } from './utils';
 
