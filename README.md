@@ -6,9 +6,9 @@ Generates favicons, app-touch icons and descriptor/manifest files for IOS, Andro
 
 
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
-[![NPM version](https://badge.fury.io/js/badge-list.svg)](http://badge.fury.io/js/badge-list)
-[![Dependency Status](https://david-dm.org/boennemann/badges.svg)](https://david-dm.org/boennemann/badges)
-[![devDependency Status](https://david-dm.org/boennemann/badges/dev-status.svg)](https://david-dm.org/boennemann/badges#info=devDependencies)
+[![npm version](https://badge.fury.io/js/%40connected-home%2Fhivehome-webapp-favicons-webpack-plugin.svg)](https://badge.fury.io/js/%40connected-home%2Fhivehome-webapp-favicons-webpack-plugin)
+[![Dependency Status](https://david-dm.org/ConnectedHomes/hivehome-webapp-favicons-webpack-plugin.svg)](https://david-dm.org/ConnectedHomes/hivehome-webapp-favicons-webpack-plugin)
+[![devDependency Status](https://david-dm.org/ConnectedHomes/hivehome-webapp-favicons-webpack-plugin/dev-status.svg)](https://david-dm.org/ConnectedHomes/hivehome-webapp-favicons-webpack-plugin#info=devDependencies)
 
 ## Supported Platforms:
 
