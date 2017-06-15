@@ -10,6 +10,12 @@ Generates favicons, app-touch icons and descriptor/manifest files for IOS, Andro
 [![Dependency Status](https://david-dm.org/ConnectedHomes/hivehome-webapp-favicons-webpack-plugin.svg)](https://david-dm.org/ConnectedHomes/hivehome-webapp-favicons-webpack-plugin)
 [![devDependency Status](https://david-dm.org/ConnectedHomes/hivehome-webapp-favicons-webpack-plugin/dev-status.svg)](https://david-dm.org/ConnectedHomes/hivehome-webapp-favicons-webpack-plugin#info=devDependencies)
 
+## Configuration options
+
+`title` - The app name (will appear in `browserconfig.xml` and `manifest.json` files)
+`prefix` - A filename prefix to append to all output filenames. Note the string `[hash]` in the prefix will be replaced by a sha256 hash of the source file.
+`platforms` - A map of configurations, supports: `generic`, `iphone`, `android` and `windows`. Each must contain *at least* a reference to a `source` file, but there are other platform-specific options too. See the example below.
+
 ## Supported Platforms:
 
 ### Generic
@@ -57,6 +63,9 @@ Windows format `browserconfig.xml` and icons
 Notes:
  1. For each `ms-tile-...` file - the actual file size does not reflect the 'size' it is supposed to represent (except for the 144x144 which just is what it is)... cause... Microsoft!
  2. Because the widescreen format tile (mstile-558x270.png) it is at odds with the proportions of a square source image. In this case the conversion will 'letterbox' the image using either a transparent background or if supplied using the `tileColor` config option as the background color.
+
+## Prefix
+If you specify a filename prefix in the
 
 ## Usage
 ```javascript
