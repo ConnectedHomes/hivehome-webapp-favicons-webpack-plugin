@@ -57,7 +57,7 @@
     "prettier-config": "^1.0.0"
   },
   "peerDependencies": {
-    "webpack": ">= 1.14.x <= 3.x"
+    "webpack": "1.14.x - 3.x"
   },
   "dependencies": {
     "babel-runtime": "^6.11.6",
