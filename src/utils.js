@@ -50,7 +50,6 @@ export function addFileToAssets(filename, path, compilation) {
         const source = fs.readFileSync(filename);
         const basename = filename.replace(`${path}/`, '');
 
-        compilation.fileDependencies.push(filename);
         compilation.assets[basename] = {
             source: () => source,
             size: () => size
