@@ -16,7 +16,7 @@ Generates favicons, app-touch icons and descriptor/manifest files for IOS, Andro
 
 `prefix` - A filename prefix to append to all output filenames. Note the string `[hash]` in the prefix will be replaced by a sha256 hash of the source file.
 
-`platforms` - A map of configurations, supports: `generic`, `iphone`, `android` and `windows`. Each must contain *at least* a reference to a `source` file, but there are other platform-specific options too. See the example below.
+`platforms` - A map of configurations, supports: `generic`, `ios`, `android` and `windows`. Each must contain *at least* a reference to a `source` file, but there are other platform-specific options too. See the example below.
 
 ## Supported Platforms:
 
@@ -29,7 +29,7 @@ Standard format favicons
   - favicon-48x48.png
   - favicon-64x64.png
 
-### iPhone
+### iOS
 IOS Format `app-touch-icons`
   - apple-touch-icon-57x57.png
   - apple-touch-icon-60x60.png
@@ -84,7 +84,7 @@ const config = {
           generic: {
               source: path.join(__dirname, '../lib/assets/icons', 'favicon.png')
           },
-          iphone: {
+          ios: {
               source: path.join(__dirname, '../lib/assets/icons', 'app-icon.png'),
               statusBar: 'black-translucent'
           },

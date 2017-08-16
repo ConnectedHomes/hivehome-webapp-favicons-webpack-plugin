@@ -1,11 +1,11 @@
 import android from './android';
 import generic from './generic';
-import iphone from './iphone';
+import ios from './ios';
 import windows from './windows';
 
 export default {
     android,
-    iphone,
+    ios,
     generic,
     windows
 };
