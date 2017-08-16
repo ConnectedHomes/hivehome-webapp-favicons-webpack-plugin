@@ -1,6 +1,6 @@
 {
   "name": "@connected-home/hivehome-webapp-favicons-webpack-plugin",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Favicon Generator for Hivehome Webapp",
   "main": "lib/index.js",
   "engines": {
